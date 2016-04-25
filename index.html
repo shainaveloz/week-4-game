@@ -32,6 +32,7 @@
 					<div id="score">
 						<ul style= "list-style-type: none">
 							<li id="scores"></li>
+							<li id="results"></li>
 							<li id="wins"></li>
 							<li id="loses"></li>
 						</ul>
@@ -71,23 +72,28 @@
 			    var score = 0;
 			     $('button').click(function(){
 			        score = Number(score) + Number($(this).val());
-			        $('#score').text("Your total score is:"+score);
+			        $('#score').text("Your total score is:"+score) + "<br>";
 			        if (rand == score) {
-					wins += 1;
-					alert("Congrats, YOU WIN !");
+						wins ++;
+						alert("Congrats, YOU WIN !");
+						location.reload();
 					}	
 					else if (rand < score) {
-						loses += 1;
+						loses ++;
 						alert("YOU LOSE!!!");
+						location.reload();
 					}
 
 					
 			     });
 
 				
-					console.log("wins =" + wins);
-					console.log("Loses =" + loses);
-					$("#score").html
+					console.log("wins = " + wins);
+					console.log("loses = " + loses);
+					
+					$("#wins").html = "Wins = " + wins;
+
+					$("#loses").html = "Loses = " + loses;
 
 
 });
