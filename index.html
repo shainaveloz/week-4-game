@@ -32,9 +32,9 @@
 					<div id="scores">
 						<ul style= "list-style-type: none">
 							<li id="score"></li>
-							<li id="results"></li>
-							<li id="wins"></li>
-							<li id="loses"></li>
+							<li id="results">Results:</li>
+							<li id="wins">Wins:</li>
+							<li id="losses">Losses:</li>
 						</ul>
 					</div>
 					<div id="counter">
@@ -47,69 +47,6 @@
 			
 		</div>
 		<script type="text/javascript" src="assets/javascript/game.js">
-			$(document).ready(function(event){
-				var crystals = "";
-				var score;
-				var wins = 0;
-				var losses = 0;
-				var counter;
-
-				var randomNumber = (function(min, max){
-					return Math.round(Math.random() * (max - min) + min);
-				});
-
-				var rand = randomNumber(19,120);
-				console.log(rand);
-
-				$("#random").append(rand);	
-
-				var crystalVal = randomNumber(1,12); 
-				$('#button1').val(randomNumber(1,12));
-			    $('#button2').val(randomNumber(1,12));
-			    $('#button3').val(randomNumber(1,12));
-			    $('#button4').val(randomNumber(1,12));
-    
-			    var score = 0;
-			     $('button').click(function(){
-			        score = Number(score) + Number($(this).val());
-			        $('#score').text("Your total score is:"+score) + "<br>";
-			        if (rand == score) {
-						wins+=1;
-						alert("Congrats, YOU WIN !");
-						$("#wins").append("Wins = " + wins);
-						console.log("wins = " + wins);
-						// location.reload();
-					}	
-					else if (rand < score) {
-						losses+=1;
-						alert("YOU LOSE!!!");
-						$("#loses").append("Losses = " + losses);
-						console.log("losses = " + losses);
-						// location.reload();
-					}
-
-					
-			     });
-
-			     var html = "<p>Click any crystal to start playing</p>" + 
-			     "<br><p>wins = " + 
-			     wins + 
-			     "<br><p>Losses = " + 
-			     loses;
-
-			     $('#game').html('#html');
-				
-					// console.log("wins = " + wins);
-					// console.log("loses = " + loses);
-					
-					// $("#wins").html = "Wins = " + wins;
-
-					// $("#loses").html = "Loses = " + loses;
-
-
-});
-
-			
 			
 		</script>
 	</body>
