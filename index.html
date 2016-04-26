@@ -29,9 +29,9 @@
                     </div>
 				</div>
 				<div class="col-md-4">
-					<div id="score">
+					<div id="scores">
 						<ul style= "list-style-type: none">
-							<li id="scores"></li>
+							<li id="score"></li>
 							<li id="results"></li>
 							<li id="wins"></li>
 							<li id="loses"></li>
@@ -46,12 +46,12 @@
 			</div>
 			
 		</div>
-		<script type="text/javascript">
+		<script type="text/javascript" src="assets/javascript/game.js">
 			$(document).ready(function(event){
 				var crystals = "";
 				var score;
-					var wins = 0;
-					var loses = 0;
+				var wins = 0;
+				var losses = 0;
 				var counter;
 
 				var randomNumber = (function(min, max){
@@ -74,30 +74,42 @@
 			        score = Number(score) + Number($(this).val());
 			        $('#score').text("Your total score is:"+score) + "<br>";
 			        if (rand == score) {
-						wins ++;
+						wins+=1;
 						alert("Congrats, YOU WIN !");
-						location.reload();
+						$("#wins").append("Wins = " + wins);
+						console.log("wins = " + wins);
+						// location.reload();
 					}	
 					else if (rand < score) {
-						loses ++;
+						losses+=1;
 						alert("YOU LOSE!!!");
-						location.reload();
+						$("#loses").append("Losses = " + losses);
+						console.log("losses = " + losses);
+						// location.reload();
 					}
 
 					
 			     });
 
-				
-					console.log("wins = " + wins);
-					console.log("loses = " + loses);
-					
-					$("#wins").html = "Wins = " + wins;
+			     var html = "<p>Click any crystal to start playing</p>" + 
+			     "<br><p>wins = " + 
+			     wins + 
+			     "<br><p>Losses = " + 
+			     loses;
 
-					$("#loses").html = "Loses = " + loses;
+			     $('#game').html('#html');
+				
+					// console.log("wins = " + wins);
+					// console.log("loses = " + loses);
+					
+					// $("#wins").html = "Wins = " + wins;
+
+					// $("#loses").html = "Loses = " + loses;
 
 
 });
 
+			
 			
 		</script>
 	</body>
