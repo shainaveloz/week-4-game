@@ -4,28 +4,36 @@
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<title>Crystal Game</title>
 </head>
 	<body>
-		<h1>Sailor Moon Crystal Revenge</h1>
+
+		<header>
+			<div id="head">
+				<h1>Sailor Moon Crystal Revenge</h1>
+			</div>
+		</header>
+		<img src="assets/images/sailor_moon.jpg" id="sailor_moon">
 		<div id="container">
 			<div class="row">
 				<div class="col-md-4" id="instructions">
-					<p>You will be given a random number at the start of the game.</p>
-					<p>There are four crystals below. By clicking on a crytal you will ass a specific amount of points to your total score.</p>
-					<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
-					<p>The value of each crystal is hidden from you until you click on it.</p>
-					<p>Each time when the game starts, the game will change the values of each crystal.</p>	
+					<br><p>You will be given a random number at the start of the game.</p><br>
+					<br><p>There are four crystals below. By clicking on a crytal you will ass a specific amount of points to your total score.</p><br>
+					<br><p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p><br>
+					<br><p>The value of each crystal is hidden from you until you click on it.</p><br>
+					<br><p>Each time when the game starts, the game will change the values of each crystal.</p>	<br>
 				</div>
 				<div class="col-md-4">
 					<div id="random">
-						
+						<p>Random Number: </p>
 					</div>
 					<div id="crystals">
-						<button id="button1" class="btn btn-crystal" value=("")><h1>1</h1></button>
-	                    <button id="button2" class="btn btn-crystal" value=("")><h1>2</h1></button>
-	                    <button id="button3" class="btn btn-crystal" value=("")><h1>3</h1></button>
-	                    <button id="button4" class="btn btn-crystal" value=("")><h1>4</h1></button>	
+						<button id="button1" class="btn btn-crystal" value=("") ><img src="assets/images/canary.jpg" height="50px" width="50px"></button>
+	                    <button id="button2" class="btn btn-crystal" value=("")><img src="assets/images/sapphire.jpg"height="50px" width="50px"></button>
+	                    <button id="button3" class="btn btn-crystal" value=("")><img src="assets/images/ruby.jpg"height="50px" width="50px"></button>
+	                    <button id="button4" class="btn btn-crystal" value=("")><img src="assets/images/amethyst.jpg"height="50px" width="50px"></button>	
                     </div>
 				</div>
 				<div class="col-md-4">
