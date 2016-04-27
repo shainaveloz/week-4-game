@@ -12,7 +12,7 @@
 				var rand = randomNumber(19,120);
 				console.log(rand);
 
-				$("#random").append(rand);	
+				$("#random").append("Random Number: " + rand);	
 
 				var crystalVal = randomNumber(1,12); 
 				$('#button1').val(randomNumber(1,12));
@@ -25,7 +25,7 @@
 			    	rand = randomNumber(19,120);
 			    	crystalVal = randomNumber(1,12);
 			    	$('#random').empty();
-			    	$('#random').append(rand);	
+			    	$('#random').append("Random Number: " + rand);	
 					$('#button1').val(randomNumber(1,12));
 				    $('#button2').val(randomNumber(1,12));
 				    $('#button3').val(randomNumber(1,12));
