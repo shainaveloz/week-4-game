@@ -27,10 +27,11 @@ h1 {
 }
 
 #crystals {
-	margin-left: 8%;
+	padding: 10%;
 }
 
 #random {
+	margin-left: 5%;
 	padding: 15%;
 }
 
